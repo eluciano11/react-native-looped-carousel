@@ -314,8 +314,8 @@ export default class Carousel extends Component {
     return (
       <View style={styles.arrows} pointerEvents="box-none">
         <View style={[styles.arrowsContainer, this.props.arrowsContainerStyle]} pointerEvents="box-none">
-          <TouchableOpacity onPress={() => this.animateToPage(this._normalizePageNumber(currentPage - 1))} style={this.props.arrowStyle}>{this.props.leftArrowText ? this.props.leftArrowText : null}</TouchableOpacity>
-          <TouchableOpacity onPress={() => this.animateToPage(this._normalizePageNumber(currentPage + 1))} style={this.props.arrowStyle}>{this.props.rightArrowText ? this.props.rightArrowText : null}</TouchableOpacity>
+          <TouchableOpacity onPress={() => this.animateToPage(this._normalizePageNumber(currentPage - 1))} style={this.props.arrowStyle}>{this.props.leftArrowText !== null ? this.props.leftArrowText : null}</TouchableOpacity>
+          <TouchableOpacity onPress={() => this.animateToPage(this._normalizePageNumber(currentPage + 1))} style={this.props.arrowStyle}>{this.props.rightArrowText !== null ? this.props.rightArrowText : null}</TouchableOpacity>
         </View>
       </View>
     );
